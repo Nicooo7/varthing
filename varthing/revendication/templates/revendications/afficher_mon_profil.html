@@ -1,0 +1,36 @@
+{% extends "revendications/militer.html" %} 
+{% load static %}
+                                
+
+{% block barre_centrale %}  
+
+            <h1>{{profil.utilisateur}}</h1>
+
+            
+
+            <p> revendications: {% for proposition in revendications %}
+				 
+			<div> proposition: {{proposition}}</div>
+		
+    		{% endfor %}
+    		</p>
+            
+
+
+            <p> documents: {{documents}}</p>
+            <p> organisations: {% for organisation in organisations %}
+				 
+			<div> organisation: {{organisation}}</div>
+		
+    		{% endfor %}
+
+
+
+            </p>
+
+
+            <p> actualites: {{actualites}}</p>
+            <p> suggestions: {{suggestions}}</p>
+        
+
+{% endblock %}
